@@ -1,0 +1,82 @@
+.status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Orders */
+.status-pending {
+  color: #1e40af;
+  background: #dbeafe;
+}
+
+.status-assigned {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.status-accepted {
+  color: #4338ca;
+  background: #e0e7ff;
+}
+
+.status-picked {
+  color: #c2410c;
+  background: #ffedd5;
+}
+
+.status-ontheway {
+  color: #0369a1;
+  background: #e0f2fe;
+}
+
+.status-delivered {
+  color: #065f46;
+  background: #d1fae5;
+}
+
+.status-failed {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.status-cancelled {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+/* Payment / Wallet */
+.status-paid {
+  color: #065f46;
+  background: #d1fae5;
+}
+
+.status-refund {
+  color: #7e22ce;
+  background: #f3e8ff;
+}
+
+/* Agents */
+.status-active {
+  color: #065f46;
+  background: #d1fae5;
+}
+
+.status-blocked {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+/* Support / Contacts */
+.status-open {
+  color: #1e40af;
+  background: #dbeafe;
+}
+
+.status-closed,
+.status-resolved {
+  color: #065f46;
+  background: #d1fae5;
+}
+
