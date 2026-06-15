@@ -1,4 +1,4 @@
-<img width="1919" height="962" alt="products" src="https://github.com/user-attachments/assets/b72a7aa8-e4b5-46f2-ab39-04142915be12" /># 🛒 TS Organic Mall – MERN Stack E-Commerce Platform for Fruits & Vegetables
+<img width="1917" height="966" alt="HomePage" src="https://github.com/user-attachments/assets/7c153a24-fea9-4667-bed0-d57cc32d9d24" /># 🛒 TS Organic Mall – MERN Stack E-Commerce Platform for Fruits & Vegetables
 
 A modern full-stack grocery e-commerce web application built using **React, Node.js, Express, and MongoDB**.  
 It supports dynamic product listing, cart management, authentication, and secure payment integration.
