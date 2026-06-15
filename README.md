@@ -7,9 +7,7 @@ It supports dynamic product listing, cart management, authentication, and secure
 
 ## 🌐 Live Links
 
-- 🖥️ Frontend (Live Site): https://tsorganicmall.netlify.app/
-- ⚙️ Backend API: https://ts-organic-mall-backend.onrender.com
-- 📦 GitHub Repository: https://github.com/Saloni-Patel06/Ts_Organic_Mall
+- 🖥️ Live Site : https://tsorganicmall.netlify.app/
 
 ---
 
