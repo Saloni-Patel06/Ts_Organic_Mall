@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { generateInvoice } from "../utils/invoiceUtils";
 import { apiFetch } from "../utils/apiFetch";
+import getImage from "../utils/imagePath";
 
 const OrderDetails = () => {
   const { id } = useParams();
@@ -56,7 +57,7 @@ const OrderDetails = () => {
   const getItemImage = (item) => {
     if (item.img) return item.img;
     if (item.productImage) return item.productImage;
-    return "/img/default.png";
+    return getImage("/img/default.png");
   };
 
   const subtotal = order.subtotal || order.items?.reduce((sum, item) => sum + item.quantity * item.price, 0) || 0;
