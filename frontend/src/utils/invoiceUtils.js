@@ -20,7 +20,9 @@ export const generateInvoice = async (order) => {
   let y;
 
   // ===== LOGO =====
-  const logo = await getBase64ImageFromURL("/img/logots.png");
+  const logo = await getBase64ImageFromURL(
+    process.env.PUBLIC_URL + "/img/logots.png"
+  );
   doc.addImage(logo, "PNG", margin, 10, 40, 40);
 
   // ===== HEADER =====
