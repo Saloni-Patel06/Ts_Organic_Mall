@@ -1,4 +1,3 @@
-import getImage from "../utils/imagePath";
 import { FaEnvelope } from "react-icons/fa";
 
 const Team = () => {
@@ -10,7 +9,7 @@ const Team = () => {
             // role: "Founder & CEO - TS Organic Mall",
             description: "Leading the organic revolution with fresh produce and sustainable farming practices.",
             email: "tinarathva42@gmail.com",
-            image: getImage("/img/tina.png")
+            image: "/img/tina.png"
         },
         {
             id: 2,
@@ -18,7 +17,7 @@ const Team = () => {
             // role: "Full Stack Developer - TS Organic Mall",
             description: "Building seamless e-commerce experiences for organic fruits and vegetables delivery.",
             email: "psaloni0610@gmail.com",
-            image:  getImage("/img/saloni1.jpeg")
+            image: "/img/saloni1.jpeg"
         }
     ];
 

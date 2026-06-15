@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { apiFetch } from "../utils/apiFetch";
-import getImage from "../utils/imagePath";
-
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -59,7 +57,7 @@ const Orders = () => {
   const getProductImage = (order) => {
     if (order.items?.[0]?.img) return order.items[0].img;
     if (order.items?.[0]?.productImage) return order.items[0].productImage;
-    return getImage("/img/default.png");
+    return "/img/default.png";
   };
 
   return (

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CommonTable from "./../components/CommonTable";
 import { apiFetch } from "../utils/apiFetch";
-import getImage from "../utils/imagePath";
 
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);
@@ -63,7 +62,7 @@ const ManageProducts = () => {
       price,
       stock,
       unit: form.unit.value || "",
-      img: previewImg || getImage("/img/default.png"),
+      img: previewImg || "/img/default.png",
     };
 
     try {

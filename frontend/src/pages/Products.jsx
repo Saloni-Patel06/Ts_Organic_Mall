@@ -1,3 +1,4 @@
+import getImage from "../utils/imagePath";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { apiFetch } from "../utils/apiFetch";
@@ -133,7 +134,7 @@ const Products = ({ cartQty, setCartQty }) => {
                 <div key={key} className="col-xl-5th col-lg-3 col-md-4 col-6">
                   <div className="prod-card">
                     {outOfStock && <span className="out-badge">Out of Stock</span>}
-                    <img src={p.img} alt={p.name} className="prod-img" />
+                    <img src={getImage(p.img)} alt={p.name} className="prod-img" />
                     <div style={{ padding: "10px 12px 12px" }}>
                       <div className="unit-badge">{p.unit}</div>
                       <div className="prod-name">{p.name}</div>

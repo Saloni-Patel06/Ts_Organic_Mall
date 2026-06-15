@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { apiFetch } from "../utils/apiFetch";
-import getImage from "../utils/imagePath";
+
 const Header = ({ cartQty }) => {
     const [products, setProducts] = useState([]);
 
@@ -119,9 +119,7 @@ const Header = ({ cartQty }) => {
                         style={{ cursor: "pointer" }}
                         onClick={handleLogoClick}
                     >
-
-
-                        <img src={getImage("/img/logots.png")} alt="logo" style={{ height: 60 }} />
+                        <img src="/img/logots.png" alt="logo" style={{ height: 60 }} />
                         <h3
                             className="fw-bold m-0 ms-1"
                             style={{

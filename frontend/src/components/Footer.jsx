@@ -1,4 +1,3 @@
-import getImage from "../utils/imagePath";
 import { Link, useLocation } from "react-router-dom";
 // import { FaEnvelope } from "react-icons/fa";
 
@@ -107,7 +106,7 @@ function Footer() {
               </div>
 
               <div className="col-lg-3 col-md-6 ">
-                <img src={getImage("/img/baglogo.png")} alt='' style={{ height: 250, width: 250, borderRadius: "25px" }}></img> </div>
+                <img src="/img/baglogo.png" alt='' style={{ height: 250, width: 250, borderRadius: "25px" }}></img> </div>
 
 
             </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CheckoutStepper from "../components/CheckoutStepper";
-import getImage from "../utils/imagePath";
 
 const Summary = () => {
   const navigate = useNavigate();
@@ -40,7 +39,7 @@ const Summary = () => {
               {items.length > 0 ? items.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0", borderBottom: i < items.length - 1 ? "1px solid #f0f0f0" : "none" }}>
                   <div style={{ width: 48, height: 48, borderRadius: 6, background: "#f5f5f5", overflow: "hidden", flexShrink: 0 }}>
-                    <img src={item.img || getImage("/img/default.png")} alt={item.productName} style={{ width: "100%", height: "100%", objectFit: "cover" }} onError={e => e.target.src = "/img/default.png"} />
+                    <img src={item.img || "/img/default.png"} alt={item.productName} style={{ width: "100%", height: "100%", objectFit: "cover" }} onError={e => e.target.src = "/img/default.png"} />
                   </div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "#1a1a1a" }}>{item.productName}</div>
