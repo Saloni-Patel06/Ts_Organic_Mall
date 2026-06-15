@@ -33,7 +33,7 @@ const withdrawRoutes = require('./routes/withdrawRoutes');
 app.use('/', userRoutes);
 app.use("/manage-products", productRoutes);
 app.use('/', orderRoutes);
-app.use('/', verifyPaymentRoutes);  
+app.use('/', verifyPaymentRoutes);
 app.use('/', contactRoutes);
 app.use('/', supportRoutes);
 app.use('/', cartRoutes);
@@ -83,11 +83,10 @@ const startServer = async () => {
   await connectDB();
   const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log("Server running at http://localhost:5000");
-    console.log("Swagger docs at http://localhost:5000/api-docs");
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+    console.log(`Swagger docs at /api-docs`);
   });
-
 };
 
 
