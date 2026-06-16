@@ -7,6 +7,8 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const cors = require('cors');
 const app = express();
 
+const path = require("path");
+
 app.use(express.json());
 app.use(
   cors({
@@ -15,7 +17,11 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+app.get("/", (req, res) => {
+  res.send("TS Organic Mall Backend is running 🚀");
+});
 
 const userRoutes = require('./routes/userRoutes');
 const orderRoutes = require('./routes/orderRoutes');
@@ -57,7 +63,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:5000"
+        url: process.env.BASE_URL || "http://localhost:5000"
       }
     ],
     components: {
