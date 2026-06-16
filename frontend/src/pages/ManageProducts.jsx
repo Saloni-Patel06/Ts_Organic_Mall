@@ -73,7 +73,7 @@ const ManageProducts = () => {
           body: JSON.stringify(productData),
         });
       } else {
-        await apiFetch(`/manage-products/${modal.product.id}`, {
+        await apiFetch(`/manage-products/${modal.product._id.$oid}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(productData),
@@ -102,14 +102,19 @@ const ManageProducts = () => {
 
   const handleDeleteSelected = async (rows) => {
     for (const row of rows) {
-      await apiFetch(`/manage-products/${row.id}`, { method: "DELETE" });
+      await apiFetch(`/manage-products/${row.original._id.$oid}`, {
+        method: "DELETE",
+      });
     }
     fetchProducts();
   };
 
   const columns = [
-    { accessorKey: "id", header: "ID" },
     {
+      accessorKey: "_id",
+      header: "ID",
+      Cell: ({ row }) => row.original._id.$oid
+    }, {
       accessorKey: "img",
       header: "Image",
       Cell: ({ row }) => (
@@ -131,7 +136,7 @@ const ManageProducts = () => {
       Cell: ({ row }) => (
         <div className="d-flex gap-2">
           <button className="btn btn-sm btn-outline-primary" onClick={() => openModal("edit", row.original)}>Update</button>
-          <button className="btn btn-sm btn-outline-danger" onClick={() => handleDelete(row.original.id)}>Delete</button>
+          <button className="btn btn-sm btn-outline-danger" onClick={() => handleDelete(row.original._id.$oid)}>Delete</button>
         </div>
       ),
     },

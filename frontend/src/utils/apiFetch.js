@@ -1,4 +1,5 @@
-const API_BASE = "http://localhost:5000";
+// const API_BASE = "http://localhost:5000";
+const API_BASE = "https://ts-organic-mall-backend.onrender.com";
 
 export const apiFetch = async (url, options = {}) => {
   let accessToken = localStorage.getItem("accessToken");
